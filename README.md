@@ -4,8 +4,8 @@
 
 ### API
 
-- `Ready.handler` - is the standard middleware handler for your http server, it retuens responses as per UW operational endpoints spec - https://github.com/utilitywarehouse/operational-endpoints-spec/blob/master/READY.md
-- `Ready.onCall` - registers a callback to be fired on each invocation of the handler. The callback will be called with handler callback method which needs to be called with boolean value to indicate if the service is ready or not. Registering a callback is optional, by default the handler will return OK as soon as the API is up.
+- `Ready.handler` - is the standard middleware handler for your http server, it returns responses as per UW operational endpoints spec - https://github.com/utilitywarehouse/operational-endpoints-spec/blob/master/READY.md
+- `Ready.onCall` - registers a callback to be fired on each invocation of the handler. The callback will be called with handler callback method which needs to be called (still with me?) with boolean value to indicate if the service is ready or not. Registering a callback is optional, by default the handler will return OK as soon as the API is up.
 
 ### Example
 
