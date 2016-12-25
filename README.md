@@ -25,6 +25,8 @@
 - `About.setMeta(string name, string description)` - sets meta name information
 - `About.addOwner({string name, string slack, string email})` - adds ownership information (can add multiple owners by calling this method multiple times)
 - `About.addLink(string description, string link)` - adds link information (can add multiple links by calling this method multiple times)
+- `About.setBuildInfo({string revision, ...info})` - adds build information
+- `About.addOther(key, value)` - adds arbitrary value, key will be automatically prefixed with `_`
 
 ### Build info
 
