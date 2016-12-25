@@ -3,11 +3,17 @@
   "version": "1.0.0",
   "description": "node.js implementation of UW operational endpoints spec",
   "main": "index.js",
+  "bin": {
+    "build-info": "./bin/build-info.js",
+    "circle-info": "./bin/circle-info.js"
+  },
   "repository": "git@github.com:utilitywarehouse/uw-lib-operational.js.git",
   "author": "Utility Warehouse Web Systems <it-websystems@utilitywarehouse.co.uk>",
   "license": "MIT",
   "dependencies": {
-    "async": "^2.1.4"
+    "async": "^2.1.4",
+    "commander": "^2.9.0",
+    "jsonfile": "^2.4.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",

@@ -1,0 +1,16 @@
+{
+  "name": "name#service",
+  "description": "description#service",
+  "owners": [{
+    "team": "other team"
+  }],
+  "links": [{
+    "description": "link#desc",
+    "link": "link#loc"
+  }],
+  "build-info": {
+    "revision": "rev#123"
+  },
+  "some": "other",
+  "even": {"nested": "value"}
+}

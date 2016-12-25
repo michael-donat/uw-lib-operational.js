@@ -27,7 +27,7 @@ health.addCheck('db', r => {
 about.setMeta('name', 'description');
 about.addOwner({name: 'Web Systems Team', slack: '#web-systems', email: 'it-websystems@utilitywarehosue.co.uk'});
 about.addLink('README', 'https://github.com/utilitywarehouse/uw-lib-operational.js/README.md');
-about.fromFile(path(__dirname, 'about.json'));
+about.fromFile(path(__dirname, 'build.json'));
 
 app.use('/__/about', about.handler);
 app.use('/__/ready', ready.handler);

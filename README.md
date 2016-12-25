@@ -26,6 +26,27 @@
 - `About.addOwner({string name, string slack, string email})` - adds ownership information (can add multiple owners by calling this method multiple times)
 - `About.addLink(string description, string link)` - adds link information (can add multiple links by calling this method multiple times)
 
+### Build info
+
+For CI there's an extra command line tool provided called `build-info`:
+
+```
+  Usage: build-info [options]
+
+  Options:
+
+    -h, --help              output usage information
+    -V, --version           output the version number
+    -l --link <string>      link to build
+    -n --number <string>    build number
+    -r --revision <string>  code revision
+    -o --output [string]    output file
+```
+
+### Circle info
+
+For convinience, above command has been preconfigured to read from CircleCI environment, available as `circle-info`.
+
 ## Example
 
 ```node.js
@@ -58,7 +79,7 @@ health.addCheck('db', r => {
 about.setMeta('name', 'description');
 about.addOwner({name: 'Web Systems Team', slack: '#web-systems', email: 'it-websystems@utilitywarehosue.co.uk'});
 about.addLink('README', 'https://github.com/utilitywarehouse/uw-lib-operational.js/README.md');
-about.fromFile(path(__dirname, 'about.json'));
+about.fromFile(path(__dirname, 'build.json'));
 
 app.use('/__/about', about.handler);
 app.use('/__/ready', ready.handler);
@@ -67,4 +88,5 @@ app.use('/__/health', health.handler);
 app.listen(3000, () => {
 	console.log('Example ready on http://0.0.0.0:3000');
 });
+
 ```
