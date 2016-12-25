@@ -7,9 +7,7 @@
   "author": "Utility Warehouse Web Systems <it-websystems@utilitywarehouse.co.uk>",
   "license": "MIT",
   "dependencies": {
-    "commander": "^2.9.0",
-    "git-rev-sync": "^1.8.0",
-    "remote-origin-url": "^0.5.2"
+    "async": "^2.1.4"
   },
   "devDependencies": {
     "chai": "^3.5.0",
