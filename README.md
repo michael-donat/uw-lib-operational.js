@@ -60,7 +60,7 @@ const app = express();
 
 const ready = new operational.Ready();
 const health = new operational.Health();
-const about = new oprtational.About();
+const about = new operational.About();
 
 ready.onCall(r => {
 	r.ready();
