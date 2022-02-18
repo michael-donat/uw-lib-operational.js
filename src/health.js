@@ -134,7 +134,9 @@ class Health {
 		return {
 			name: this.name,
 			description: this.description,
-			health: result.sort(check => check.precedence)[0].health,
+			health: result.sort((a, b) => {
+				return a.precedence > b.precedence ? 1 : b.precedence > a.precedence ? -1 : 0
+			})[0].health,
 			checks: result.map(check => check.json)
 		};
 	}
